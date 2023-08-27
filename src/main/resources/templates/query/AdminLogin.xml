@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="templates.query.adminLogin">
+	<select id="loginProcess" resultType="adminLogin" parameterType="adminLogin">
+		SELECT a_id, a_pwd, a_email
+		FROM spring_admin
+		WHERE a_id = #{a_id} and a_pwd = #{a_pwd}
+	</select>
+
+</mapper>
